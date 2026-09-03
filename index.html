@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="assets/estilo.css">
 </head>
 
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+<body class="body">
+    <header class="header">
+                <nav class="navbar_class navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="#">HUERTO HOGAR</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -32,5 +32,52 @@
             </div>
         </nav>
     </header>
+    <main class="main-content">
+        <section class="hero text-center py-5">
+            <div class="container">
+                <h1 class="display-4">Bienvenido a HUERTO HOGAR</h1>
+                <p class="lead">Cultiva tus propios alimentos frescos y saludables en casa.</p>
+                <a href="#" class="btn btn-success btn-lg">Explorar Productos</a>
+            </div>
+            <div>
+                <img src="assets/img/huerto hogar.png" alt="Huerto Hogar" class="img-fluid mt-4">
+            </div>
+        </section>
+
+        <section class="features py-5 bg-light">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-4 mb-4">
+                        <h3>Productos de Calidad</h3>
+                        <p>Ofrecemos una amplia variedad de semillas, herramientas y accesorios para tu huerto.</p>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <h3>Asesoramiento Experto</h3>
+                        <p>Nuestro equipo de expertos te guiará en cada paso del proceso de cultivo.</p>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <h3>Comunidad Activa</h3>
+                        <p>Únete a nuestra comunidad de entusiastas del huerto y comparte tus experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact py-5">
+            <div class="container text-center">
+                <h2>Contacto</h2>
+                <p>Si tienes alguna pregunta o necesitas ayuda, no dudes en contactarnos.</p>
+                <a href="#" class="btn btn-success">Enviar Mensaje</a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 HUERTO HOGAR. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script de Bootstrap indispensable para la funcionalidad del menú móvil -->
+    <script src="https://jsdelivr.net" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>

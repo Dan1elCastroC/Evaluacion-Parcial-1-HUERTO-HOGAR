@@ -1,0 +1,129 @@
+/* ==========================================================================
+   Estilos Personalizados - Huerto Hogar (Look Minimalista)
+   ========================================================================== */
+
+/* Fondo general y fuentes ligeras */
+.body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #495057;
+    background-color: #ffffff;
+}
+
+/* Navbar limpia y transparente */
+.header {
+    background-color: transparent;
+}
+
+.navbar {
+    background-color: #198754 !important; /* Verde sólido de Bootstrap */
+    padding: 20px 0;
+}
+/* Color gris claro para el texto "HUERTO HOGAR" a la izquierda */
+.navbar-brand {
+    color: #000000 !important; 
+    font-weight: 400;
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+}
+
+/* Color negro/gris oscuro para los enlaces del menú a la derecha */
+.navbar-nav .nav-link {
+    color: #212529 !important; 
+    font-weight: 400;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+/* Opcional: un efecto sutil al pasar el mouse por los enlaces */
+.navbar-nav .nav-link:hover {
+    color: #198754 !important; 
+}
+
+/* Sección Principal (Hero) */
+.hero {
+    padding-top: 80px !important;
+    padding-bottom: 60px !important;
+}
+
+.hero h1.display-4 {
+    font-size: 3.5rem;
+    font-weight: 300; /* Texto delgado como en la captura */
+    color: #333333;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+.hero .lead {
+    font-size: 1.35rem;
+    font-weight: 300;
+    color: #6c757d;
+    margin-bottom: 35px;
+}
+
+/* Botón personalizado (Borde verde, fondo transparente/blanco) */
+.btn-success.btn-lg, .btn-success {
+    background-color: transparent !important;
+    color: #198754 !important;
+    border: 2px solid #198754 !important;
+    border-radius: 6px !important;
+    padding: 12px 30px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #198754 !important;
+    color: #ffffff !important;
+}
+
+/* Imagen central */
+.hero img {
+    max-width: 320px; /* Tamaño controlado para el logotipo central */
+    margin-top: 50px !important;
+}
+
+/* Sección de Características */
+.features {
+    background-color: #ffffff !important; /* Cambiado a blanco para quitar el gris bg-light */
+    padding: 60px 0 !important;
+}
+
+.features h3 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.features p {
+    color: #6c757d;
+    font-weight: 300;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* Sección de Contacto */
+.contact {
+    padding: 80px 0 !important;
+}
+
+.contact h2 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+/* Pie de página sutil */
+.footer {
+    background-color: #ffffff;
+    padding: 40px 0;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.footer p {
+    color: #adb5bd;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
