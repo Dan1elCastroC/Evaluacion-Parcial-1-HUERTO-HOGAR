@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios - Panel administrativo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/estilo.css">
+</head>
+<body class="body">
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="../assets/img/huerto hogar.png" alt="Logo Huerto Hogar">
+                    HUERTO HOGAR · Admin
+                </a>
+                <a href="../index.html" class="small">Volver a la tienda</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="marca">Panel administrativo</div>
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="usuarios.html" class="active">Usuarios</a>
+        </aside>
+        <section class="admin-content">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="mb-0">Usuarios</h2>
+                <a href="usuario-form.html" class="btn btn-success">Nuevo usuario</a>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover bg-white align-middle">
+                    <thead>
+                        <tr>
+                            <th>RUN</th>
+                            <th>Nombre</th>
+                            <th>Apellidos</th>
+                            <th>Correo</th>
+                            <th>Tipo</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-usuarios-admin"></tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script src="../assets/script.js"></script>
+</body>
+</html>

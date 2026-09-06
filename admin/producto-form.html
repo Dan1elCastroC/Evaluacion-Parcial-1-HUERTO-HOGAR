@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo producto - Panel administrativo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/estilo.css">
+</head>
+<body class="body">
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="../assets/img/huerto hogar.png" alt="Logo Huerto Hogar">
+                    HUERTO HOGAR · Admin
+                </a>
+                <a href="../index.html" class="small">Volver a la tienda</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="marca">Panel administrativo</div>
+            <a href="index.html">Inicio</a>
+            <a href="productos.html" class="active">Productos</a>
+            <a href="usuarios.html">Usuarios</a>
+        </aside>
+        <section class="admin-content">
+            <h2 class="mb-4" id="titulo-form-producto">Nuevo producto</h2>
+
+            <form id="form-producto" class="tarjeta-form" style="max-width: 640px;" novalidate>
+                <div class="mb-3">
+                    <label for="prod-codigo" class="form-label">Código de producto</label>
+                    <input type="text" class="form-control" id="prod-codigo" minlength="3" required>
+                    <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="prod-nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="prod-nombre" maxlength="100" required>
+                    <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="prod-descripcion" class="form-label">Descripción (opcional)</label>
+                    <textarea class="form-control" id="prod-descripcion" rows="3" maxlength="500"></textarea>
+                    <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="prod-precio" class="form-label">Precio</label>
+                        <input type="number" class="form-control" id="prod-precio" min="0" step="1" required>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="prod-stock" class="form-label">Stock</label>
+                        <input type="number" class="form-control" id="prod-stock" min="0" step="1" required>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="prod-stock-critico" class="form-label">Stock crítico (opcional)</label>
+                        <input type="number" class="form-control" id="prod-stock-critico" min="0" step="1">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="prod-categoria" class="form-label">Categoría</label>
+                    <select class="form-select" id="prod-categoria" required>
+                        <option value="">Selecciona una categoría</option>
+                        <option>Frutas y Verduras</option>
+                        <option>Semillas</option>
+                        <option>Herramientas</option>
+                        <option>Orgánicos</option>
+                    </select>
+                    <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="prod-imagen" class="form-label">Imagen (opcional)</label>
+                    <input type="file" class="form-control" id="prod-imagen" accept="image/*">
+                </div>
+
+                <button type="submit" class="btn btn-success">Guardar producto</button>
+                <a href="productos.html" class="btn btn-outline-secondary">Cancelar</a>
+            </form>
+
+            <div id="producto-exito" class="alerta-exito d-none" style="max-width: 640px;">
+                <h5>¡Producto guardado!</h5>
+                <p class="mb-0">Los cambios se guardaron correctamente. <a href="productos.html">Volver al listado</a></p>
+            </div>
+        </section>
+    </div>
+
+    <script src="../assets/script.js"></script>
+    <script>
+        // Si venimos desde "Editar" con ?codigo=XXX, precargamos los datos del producto.
+        document.addEventListener("DOMContentLoaded", () => {
+            const params = new URLSearchParams(window.location.search);
+            const codigo = params.get("codigo");
+            if (!codigo) return;
+
+            const producto = PRODUCTOS.find((p) => p.codigo === codigo);
+            if (!producto) return;
+
+            document.getElementById("titulo-form-producto").textContent = "Editar producto";
+            document.getElementById("prod-codigo").value = producto.codigo;
+            document.getElementById("prod-nombre").value = producto.nombre;
+            document.getElementById("prod-descripcion").value = producto.descripcion;
+            document.getElementById("prod-precio").value = producto.precio;
+            document.getElementById("prod-stock").value = producto.stock;
+            document.getElementById("prod-stock-critico").value = producto.stockCritico;
+            document.getElementById("prod-categoria").value = producto.categoria;
+        });
+    </script>
+</body>
+</html>

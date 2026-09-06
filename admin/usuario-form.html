@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo usuario - Panel administrativo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/estilo.css">
+</head>
+<body class="body">
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="../assets/img/huerto hogar.png" alt="Logo Huerto Hogar">
+                    HUERTO HOGAR · Admin
+                </a>
+                <a href="../index.html" class="small">Volver a la tienda</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="marca">Panel administrativo</div>
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="usuarios.html" class="active">Usuarios</a>
+        </aside>
+        <section class="admin-content">
+            <h2 class="mb-4">Nuevo usuario</h2>
+
+            <form id="form-usuario" class="tarjeta-form" style="max-width: 640px;" novalidate>
+                <div class="mb-3">
+                    <label for="usr-run" class="form-label">RUN (sin puntos ni guión)</label>
+                    <input type="text" class="form-control" id="usr-run" data-run maxlength="9" placeholder="19011022K" required>
+                    <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="usr-nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="usr-nombre" data-nombre maxlength="50" required>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="usr-apellidos" class="form-label">Apellidos</label>
+                        <input type="text" class="form-control" id="usr-apellidos" data-apellidos maxlength="100" required>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="usr-correo" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="usr-correo" data-correo maxlength="100" placeholder="usuario@duoc.cl" required>
+                    <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="usr-nacimiento" class="form-label">Fecha de nacimiento (opcional)</label>
+                    <input type="date" class="form-control" id="usr-nacimiento">
+                </div>
+
+                <div class="mb-3">
+                    <label for="usr-tipo" class="form-label">Tipo de usuario</label>
+                    <select class="form-select" id="usr-tipo" required>
+                        <option value="">Selecciona un tipo</option>
+                        <option>Administrador</option>
+                        <option>Vendedor</option>
+                        <option>Cliente</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="usr-region" class="form-label">Región</label>
+                        <select class="form-select" id="usr-region" data-region>
+                            <option value="">Selecciona una región</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="usr-comuna" class="form-label">Comuna</label>
+                        <select class="form-select" id="usr-comuna" data-comuna>
+                            <option value="">Selecciona una comuna</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="usr-direccion" class="form-label">Dirección</label>
+                    <input type="text" class="form-control" id="usr-direccion" data-direccion maxlength="300" required>
+                    <div class="invalid-feedback"></div>
+                </div>
+
+                <button type="submit" class="btn btn-success">Guardar usuario</button>
+                <a href="usuarios.html" class="btn btn-outline-secondary">Cancelar</a>
+            </form>
+
+            <div id="usuario-exito" class="alerta-exito d-none" style="max-width: 640px;">
+                <h5>¡Usuario guardado!</h5>
+                <p class="mb-0">Los cambios se guardaron correctamente. <a href="usuarios.html">Volver al listado</a></p>
+            </div>
+        </section>
+    </div>
+
+    <script src="../assets/script.js"></script>
+</body>
+</html>

@@ -50,16 +50,23 @@
                 <div class="mb-3">
                     <label for="login-correo" class="form-label">Correo electrónico</label>
                     <input type="email" class="form-control" id="login-correo" maxlength="100" placeholder="usuario@duoc.cl" required>
+                    <div class="invalid-feedback"></div>
                 </div>
 
                 <div class="mb-3">
                     <label for="login-clave" class="form-label">Contraseña</label>
                     <input type="password" class="form-control" id="login-clave" minlength="4" maxlength="10" required>
+                    <div class="invalid-feedback"></div>
                 </div>
 
                 <button type="submit" class="btn btn-success w-100">Iniciar sesión</button>
                 <p class="text-center mt-3 mb-0 small">¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
             </form>
+
+            <div id="login-exito" class="alerta-exito d-none">
+                <h5>¡Bienvenido de vuelta!</h5>
+                <p class="mb-0">Sesión iniciada correctamente.</p>
+            </div>
         </div>
     </main>
 

@@ -54,20 +54,31 @@
                 <div class="mb-3">
                     <label for="contacto-nombre" class="form-label">Nombre completo</label>
                     <input type="text" class="form-control" id="contacto-nombre" maxlength="100" required>
+                    <div class="invalid-feedback"></div>
                 </div>
 
                 <div class="mb-3">
                     <label for="contacto-correo" class="form-label">Correo (opcional)</label>
                     <input type="email" class="form-control" id="contacto-correo" maxlength="100" placeholder="usuario@duoc.cl">
+                    <div class="invalid-feedback"></div>
                 </div>
 
                 <div class="mb-3">
                     <label for="contacto-comentario" class="form-label">Comentario</label>
                     <textarea class="form-control" id="contacto-comentario" rows="4" maxlength="500" required></textarea>
+                    <div class="d-flex justify-content-between">
+                        <div class="invalid-feedback mb-0"></div>
+                        <span class="small text-muted" id="contacto-contador">0/500</span>
+                    </div>
                 </div>
 
                 <button type="submit" class="btn btn-success w-100">Enviar mensaje</button>
             </form>
+
+            <div id="contacto-exito" class="alerta-exito d-none">
+                <h5>¡Mensaje enviado!</h5>
+                <p class="mb-0">Gracias por escribirnos, te responderemos a la brevedad.</p>
+            </div>
         </div>
     </main>
 
